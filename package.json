@@ -1,0 +1,18 @@
+{
+  "name": "carousel-creator",
+  "version": "0.0.1",
+  "description": "Creates Image Carousels",
+  "repository": "https://github.com/krauzer/carousel-creator",
+  "main": "public/js/app.js",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.12.1"
+    },
+  "devDependencies": {
+     "browserify": "^7.0.0"
+    },
+  "scripts": {}
+
+}
