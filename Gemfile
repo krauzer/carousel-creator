@@ -15,6 +15,9 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'mini_magick'
+gem 'refile'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
