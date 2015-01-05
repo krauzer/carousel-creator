@@ -25,6 +25,8 @@ require 'bcrypt'
 require 'mini_magick'
 require 'refile'
 require 'aws-sdk'
+require "refile/backend/s3"
+require 'refile/image_processing'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
