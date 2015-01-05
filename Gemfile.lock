@@ -15,6 +15,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    aws-sdk-core (2.0.17)
+      builder (~> 3.0)
+      jmespath (~> 1.0)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
     backports (3.6.4)
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
@@ -54,6 +59,8 @@ GEM
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     json (1.8.1)
     listen (2.8.4)
       celluloid (>= 0.15.2)
@@ -66,6 +73,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nenv (0.1.1)
     netrc (0.10.2)
     nokogiri (1.6.5)
@@ -137,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
+  aws-sdk-core
   bcrypt-ruby
   capybara
   factory_girl
