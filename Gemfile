@@ -17,7 +17,7 @@ gem 'shotgun'
 
 gem 'mini_magick'
 gem 'refile'
-gem 'aws-sdk-core'
+gem 'aws-sdk', '2.0.17.pre'
 
 group :test do
   gem 'shoulda-matchers'
