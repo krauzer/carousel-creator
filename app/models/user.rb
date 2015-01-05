@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include BCrypt
+  has_many :photos
 
   def password
     @password ||= Password.new(password_hash)
