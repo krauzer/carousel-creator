@@ -20,6 +20,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'rack-livereload'
+require 'bcrypt'
 
 require 'mini_magick'
 require 'refile'
