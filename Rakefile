@@ -126,6 +126,22 @@ namespace :db do
   end
 end
 
+namespace :schema do
+  desc "Create a schema for your database configuration"
+  task :create do
+
+    schema = APP_ROOT.join( 'db', 'schema.rb')
+
+    if File.exist?(schema)
+      raise "ERROR: Schema file '#{schema}' already exists"
+    end
+
+    puts "Creating #{schema}"
+    File.new(schema, "w+")
+  end
+
+end
+
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "pry -r./config/environment"
