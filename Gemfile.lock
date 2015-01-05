@@ -153,6 +153,7 @@ DEPENDENCIES
   guard-livereload
   mini_magick
   pg
+  pry
   rack-livereload
   rack-test
   rake

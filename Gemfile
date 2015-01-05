@@ -29,6 +29,7 @@ end
 group :development do
   gem "rack-livereload"
   gem "guard-livereload"
+  gem "pry"
 end
 
 group :test, :development do
