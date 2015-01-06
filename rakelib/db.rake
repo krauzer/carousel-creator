@@ -46,6 +46,7 @@ db_namespace = namespace :db do
     task :dump do
       schema = APP_ROOT.join( 'db', 'schema.rb')
        File.open(schema, "w:utf-8") do |file|
+        puts "Modifiy schema.........."
           ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
       end
        db_namespace['schema:dump'].reenable
