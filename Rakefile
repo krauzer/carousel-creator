@@ -127,18 +127,6 @@ namespace :db do
 end
 
 namespace :schema do
-  desc "Create a schema for your database configuration"
-  task :create do
-    schema = APP_ROOT.join( 'db', 'schema.rb')
-
-    if File.exist?(schema)
-      raise "ERROR: Schema file '#{schema}' already exists"
-    end
-
-    puts "Creating #{schema}"
-    File.new(schema, "w+")
-  end
-
   desc "Create and populate the schema.rb file with database setup"
   task :dump do
     schema = APP_ROOT.join( 'db', 'schema.rb')
