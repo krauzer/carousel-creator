@@ -48,6 +48,7 @@ db_namespace = namespace :db do
        File.open(schema, "w:utf-8") do |file|
           ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
       end
+       db_namespace['schema:dump'].reenable
     end
 
   end
