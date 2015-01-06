@@ -16,7 +16,7 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'mini_magick'
-gem 'refile'
+gem 'refile', git: 'https://github.com/elabs/refile.git'
 gem 'aws-sdk', '2.0.17.pre'
 
 group :test do
