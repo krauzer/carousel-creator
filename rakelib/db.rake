@@ -20,8 +20,8 @@ db_namespace = namespace :db do
     ActiveRecord::Migration.verbose = ENV["VERBOSE"] ? ENV["VERBOSE"] == "true" : true
     ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, ENV["VERSION"] ? ENV["VERSION"].to_i : nil) do |migration|
       ENV["SCOPE"].blank? || (ENV["SCOPE"] == migration.scope)
-     db_namespace["schema:dump"].invoke if ActiveRecord::Base.dump_schema_after_migration
     end
+    db_namespace["schema:dump"].invoke if ActiveRecord::Base.dump_schema_after_migration
   end
 
   desc "Populate the database with dummy data by running db/seeds.rb"
