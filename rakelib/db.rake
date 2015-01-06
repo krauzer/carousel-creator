@@ -1,4 +1,4 @@
-namespace :db do
+db_namespace = namespace :db do
   desc "Drop, create, and migrate the database"
   task :reset => [:drop, :create, :migrate]
 
@@ -39,15 +39,15 @@ namespace :db do
       system "rake db:migrate RACK_ENV=test"
     end
   end
-end
 
-namespace :schema do
-  desc "Create and populate the schema.rb file with database setup"
-  task :dump do
-    schema = APP_ROOT.join( 'db', 'schema.rb')
-     File.open(schema, "w:utf-8") do |file|
-        ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+  namespace :schema do
+    desc "Create and populate the schema.rb file with database setup"
+    task :dump do
+      schema = APP_ROOT.join( 'db', 'schema.rb')
+       File.open(schema, "w:utf-8") do |file|
+          ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+      end
     end
-  end
 
+  end
 end
