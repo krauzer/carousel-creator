@@ -129,7 +129,6 @@ end
 namespace :schema do
   desc "Create a schema for your database configuration"
   task :create do
-
     schema = APP_ROOT.join( 'db', 'schema.rb')
 
     if File.exist?(schema)
@@ -138,6 +137,14 @@ namespace :schema do
 
     puts "Creating #{schema}"
     File.new(schema, "w+")
+  end
+
+  desc "Create and populate the schema.rb file with database setup"
+  task :dump do
+    schema = APP_ROOT.join( 'db', 'schema.rb')
+     File.open(schema, "w:utf-8") do |file|
+        ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+    end
   end
 
 end
