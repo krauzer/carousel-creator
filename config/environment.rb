@@ -20,6 +20,13 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'rack-livereload'
+require 'bcrypt'
+
+require 'mini_magick'
+require 'refile'
+require 'aws-sdk'
+require "refile/backend/s3"
+require 'refile/image_processing'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -53,3 +60,4 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+require APP_ROOT.join('config', 'refile_initializer')

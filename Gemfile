@@ -15,6 +15,10 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'mini_magick'
+gem 'refile', git: 'https://github.com/elabs/refile.git'
+gem 'aws-sdk', '2.0.17.pre'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -25,6 +29,7 @@ end
 group :development do
   gem "rack-livereload"
   gem "guard-livereload"
+  gem "pry"
 end
 
 group :test, :development do

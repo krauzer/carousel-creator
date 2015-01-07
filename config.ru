@@ -4,5 +4,5 @@ require ::File.expand_path('../config/environment',  __FILE__)
 use Rack::LiveReload
 
 set :app_file, __FILE__
-
-run Sinatra::Application
+map('/attachments') {run Refile.app}
+map('/') {run Sinatra::Application}
