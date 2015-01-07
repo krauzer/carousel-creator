@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
-  attachment :image
+  attachment :image, type :image
 
 end
