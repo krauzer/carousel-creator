@@ -36,9 +36,11 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      dev: '<%= app.temp %>',
+      dev: {
+        src: ['<%= app.stylesTemp %>', '<%=app.codeTemp%>']
+      },
       build: {
-        src: ['<%= app.temp %>', '<%= app.dist %>']
+        src: ['<%= app.stylesTemp %>', '<%=app.codeTemp%>', '<%= app.dist %>']
       }
     },
 
