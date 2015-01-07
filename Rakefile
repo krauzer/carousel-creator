@@ -88,4 +88,8 @@ task "console" do
   exec "pry -r./config/environment"
 end
 
+#Imports the spec task
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
+
 task :default  => :spec
