@@ -21,7 +21,7 @@ db_namespace = namespace :db do
     ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, ENV["VERSION"] ? ENV["VERSION"].to_i : nil) do |migration|
       ENV["SCOPE"].blank? || (ENV["SCOPE"] == migration.scope)
     end
-    db_namespace["schema:dump"].invoke if ActiveRecord::Base.dump_schema_after_migration
+    db_namespace["schema:dump"].invoke if ActiveRecord::Base.dump_schema_after_migration && Sinatra::Application.development?
   end
 
   desc "Populate the database with dummy data by running db/seeds.rb"
