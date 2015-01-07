@@ -1,10 +1,9 @@
 GIT
   remote: https://github.com/elabs/refile.git
-  revision: e269b9c8883ca4bbba08adcca896afc6e8880d77
+  revision: 7f7bd8ee1dc84d7a54e5f4d0a20889149c227350
   specs:
     refile (0.4.2)
       mime-types
-      rest-client (~> 1.7.2)
       sinatra (~> 1.4.5)
 
 GEM
@@ -90,7 +89,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     nenv (0.1.1)
-    netrc (0.10.2)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     notiffany (0.0.2)
@@ -112,9 +110,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rest-client (1.7.2)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
