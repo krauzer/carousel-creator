@@ -89,7 +89,10 @@ task "console" do
 end
 
 #Imports the spec task
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new
+rescue LoadError
+end
 
 task :default  => :spec
