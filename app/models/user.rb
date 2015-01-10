@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   end
 
   def password=(new_password)
+    raise ArgumentError, 'Password is not entered' if new_password.nil?
     @password = Password.create(new_password)
     self.password_hash = @password
   end
