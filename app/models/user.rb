@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :photos
 
   validates :email, format: {with: /@/}
+  validates :password_hash, presence: true
 
   def password
     @password ||= Password.new(password_hash)
