@@ -13,6 +13,7 @@ require 'rack/test'
 require 'capybara'
 require 'capybara/rspec'
 require 'factory_girl'
+require 'faker'
 
 Dir[APP_ROOT.join("spec/factories/**/*.rb")].each {|f| require f}
 
