@@ -14,6 +14,8 @@ require 'capybara'
 require 'capybara/rspec'
 require 'factory_girl'
 
+Dir[APP_ROOT.join("spec/factories/**/*.rb")].each {|f| require f}
+
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include FactoryGirl::Syntax::Methods
