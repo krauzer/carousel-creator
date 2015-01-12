@@ -21,6 +21,10 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'rack-livereload'
 require 'bcrypt'
+if development? or test? do
+  require 'dotenv'
+  Dotenv.load
+end
 
 require 'mini_magick'
 require 'refile'
