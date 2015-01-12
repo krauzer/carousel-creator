@@ -21,7 +21,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'rack-livereload'
 require 'bcrypt'
-if development? or test? do
+if development? or test?
   require 'dotenv'
   Dotenv.load
 end
