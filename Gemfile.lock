@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/elabs/refile.git
-  revision: c9187d3d01999b6634eb5008562932271887c3ba
+  revision: 6ebe4fcec304ea17e4f1c5949eed2de3cb456d12
   specs:
-    refile (0.5.0)
+    refile (0.5.1)
       mime-types
       sinatra (~> 1.4.5)
 
