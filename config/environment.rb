@@ -28,6 +28,7 @@ end
 
 require 'mini_magick'
 require 'refile'
+require 'aws-sdk-v1'
 require 'aws-sdk'
 require "refile/backend/s3"
 require 'refile/image_processing'
