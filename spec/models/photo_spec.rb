@@ -6,12 +6,6 @@ describe Photo, type: :model do
 
     context "when attaching an image" do
 
-      it "sets the image_id property" do
-      end
-
-      it "sets the image_id property" do
-      end
-
       it "sets the image_filename property" do
       end
 
@@ -37,6 +31,9 @@ describe Photo, type: :model do
     context "when saving with an attached image" do
 
       it "sends the attached image to the store backend" do
+      end
+
+      it "sets the image_id property" do
       end
     end
 
