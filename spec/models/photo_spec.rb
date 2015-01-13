@@ -46,18 +46,22 @@ describe Photo, type: :model do
   describe "#save" do
 
     context "when saving with an attached image" do
+       before(:example) do
+         File.open("spec/fixtures/sample_image.jpg", "rb") do |file|
+           photo.image = file
+         end
+      end
+        after(:example) {FileUtils.rm_rf(Dir.glob('spec/tmp/uploads/store/*'))}
 
       it "sends the attached image to the store backend" do
+        photo.save
+       expect(File.exist?("spec/tmp/uploads/store/#{photo.image.id}")).to eq true
       end
 
       it "sets the image_id property" do
+        photo.save
+        expect(photo.image_id).to eq(photo.image.id)
       end
     end
-
-      context "when saving without an attached image" do
-
-        it "raises a validation error" do
-        end
-      end
-    end
+  end
 end
