@@ -36,6 +36,9 @@ describe Photo, type: :model do
     context "when attaching a file that is not an image" do
 
       it "raises an assertion error" do
+        File.open("spec/fixtures/sample_text.txt", "rb") do |file|
+          expect {photo.image = file}.to raise_error
+        end
       end
     end
   end
