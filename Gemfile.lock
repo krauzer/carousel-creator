@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/elabs/refile.git
-  revision: 7f7bd8ee1dc84d7a54e5f4d0a20889149c227350
+  revision: 6ebe4fcec304ea17e4f1c5949eed2de3cb456d12
   specs:
-    refile (0.4.2)
+    refile (0.5.1)
       mime-types
       sinatra (~> 1.4.5)
 
@@ -32,6 +32,9 @@ GEM
       multi_xml (~> 0.5)
     aws-sdk-resources (2.0.17.pre)
       aws-sdk-core (= 2.0.17)
+    aws-sdk-v1 (1.60.2)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     backports (3.6.4)
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
@@ -47,6 +50,7 @@ GEM
       timers (~> 4.0.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    dotenv (1.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -57,7 +61,7 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.6)
     formatador (0.2.5)
-    guard (2.11.0)
+    guard (2.11.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
       lumberjack (~> 1.0)
@@ -75,23 +79,23 @@ GEM
     i18n (0.7.0)
     jmespath (1.0.2)
       multi_json (~> 1.0)
-    json (1.8.1)
-    listen (2.8.4)
+    json (1.8.2)
+    listen (2.8.5)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_magick (4.0.1)
+    mini_magick (4.0.2)
     mini_portile (0.6.2)
-    minitest (5.5.0)
+    minitest (5.5.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     nenv (0.1.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
-    notiffany (0.0.2)
+    notiffany (0.0.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.18.1)
@@ -104,7 +108,7 @@ GEM
       rack
     rack-protection (1.5.3)
       rack
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
     rb-fsevent (0.9.4)
@@ -156,8 +160,10 @@ DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   aws-sdk (= 2.0.17.pre)
+  aws-sdk-v1
   bcrypt-ruby
   capybara
+  dotenv
   factory_girl
   faker
   guard-livereload

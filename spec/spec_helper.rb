@@ -12,9 +12,15 @@ require 'shoulda-matchers'
 require 'rack/test'
 require 'capybara'
 require 'capybara/rspec'
+require 'factory_girl'
+require 'faker'
+require 'rspec/mocks'
+
+Dir[APP_ROOT.join("spec/factories/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+  config.include FactoryGirl::Syntax::Methods
 end
 
 def app

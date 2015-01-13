@@ -3,12 +3,14 @@ class User < ActiveRecord::Base
   has_many :photos
 
   validates :email, format: {with: /@/}
+  validates :password_hash, presence: true
 
   def password
     @password ||= Password.new(password_hash)
   end
 
   def password=(new_password)
+    raise ArgumentError, 'Password is not entered' if new_password.nil?
     @password = Password.create(new_password)
     self.password_hash = @password
   end

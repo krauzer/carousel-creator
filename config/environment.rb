@@ -21,9 +21,14 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'rack-livereload'
 require 'bcrypt'
+if development? or test?
+  require 'dotenv'
+  Dotenv.load
+end
 
 require 'mini_magick'
 require 'refile'
+require 'aws-sdk-v1'
 require 'aws-sdk'
 require "refile/backend/s3"
 require 'refile/image_processing'
