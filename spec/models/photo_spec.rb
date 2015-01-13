@@ -26,10 +26,7 @@ describe Photo, type: :model do
       end
 
       it "sends it to the cache backend" do
-        cache_paths = Dir["spec/tmp/uploads/cache/*"]
-        matches = 0
-        cache_paths.each {|path| matches += 1 if path.include? photo.image.id.to_s}
-        expect(matches).to eq(1)
+        expect(File.exist?("spec/tmp/uploads/cache/#{photo.image.id}")).to eq true
       end
     end
 
