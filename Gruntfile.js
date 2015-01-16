@@ -169,7 +169,7 @@ grunt.registerTask('develop', [
     'clean:dev',
     'concat:styles',
     'env:dev',
-    'concurrent:dev'
+    'browserify:dev',
   ]);
 
 grunt.registerTask('build', [
