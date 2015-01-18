@@ -168,8 +168,7 @@ module.exports = function(grunt) {
 grunt.registerTask('develop', [
     'clean:dev',
     'concat:styles',
-    'env:dev',
-    'browserify:dev',
+    'env:dev'
   ]);
 
 grunt.registerTask('build', [
