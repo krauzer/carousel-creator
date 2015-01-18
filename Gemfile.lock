@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/elabs/refile.git
-  revision: 6ebe4fcec304ea17e4f1c5949eed2de3cb456d12
+  revision: 4cd644f77a567edc66bfb22e302feee94afa6e35
   specs:
-    refile (0.5.1)
+    refile (0.5.3)
       mime-types
       sinatra (~> 1.4.5)
 
@@ -32,7 +32,7 @@ GEM
       multi_xml (~> 0.5)
     aws-sdk-resources (2.0.17.pre)
       aws-sdk-core (= 2.0.17)
-    aws-sdk-v1 (1.60.2)
+    aws-sdk-v1 (1.61.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     backports (3.6.4)
@@ -92,7 +92,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
-    nenv (0.1.1)
+    nenv (0.2.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     notiffany (0.0.3)
