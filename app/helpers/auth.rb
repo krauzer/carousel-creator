@@ -13,3 +13,7 @@ end
 def check_user_password password
   @user.password == password
 end
+
+def reset_session
+  session.clear
+end

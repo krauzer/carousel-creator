@@ -22,3 +22,8 @@ post '/login' do
       redirect "/login"
   end
 end
+
+get '/signout' do
+    reset_session
+    redirect "/"
+end
