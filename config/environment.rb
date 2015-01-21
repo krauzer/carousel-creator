@@ -19,6 +19,7 @@ require 'logger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'sinatra/param'
+require 'better_errors' if development?
 
 require 'erb'
 require 'rack-livereload'
@@ -53,6 +54,8 @@ configure do
 end
 
 configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = APP_ROOT.to_s
   set :public_folder, File.join(Sinatra::Application.root, "tmp")
 end
 
