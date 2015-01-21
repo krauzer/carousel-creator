@@ -1,0 +1,9 @@
+  <div class="login_bar">
+  <div class="login_buttons">    <% if current_user %>
+      Welcome, <%= current_user.name %> | <a href="/signout">Signout</a>
+
+    <% else %>
+      <a href="/login">Login</a> | <a href="/signup">Signup</a>
+    <% end %>
+    </div>
+  </div>

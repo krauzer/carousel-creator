@@ -58,7 +58,7 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       styles: {
-        files: { '<%= app.stylesTemp %>application.css' : ['<%= app.stylesSrc %>*.css']  }
+        files: { '<%= app.stylesTemp %>application.css' : ['<%= app.stylesSrc %>normalize.css','<%= app.stylesSrc %>application.css','<%= app.stylesSrc %>*.css']  }
        }
      },
 
@@ -168,8 +168,7 @@ module.exports = function(grunt) {
 grunt.registerTask('develop', [
     'clean:dev',
     'concat:styles',
-    'env:dev',
-    'concurrent:dev'
+    'env:dev'
   ]);
 
 grunt.registerTask('build', [
