@@ -9,6 +9,12 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    actionview (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
     activemodel (4.2.0)
       activesupport (= 4.2.0)
       builder (~> 3.1)
@@ -90,6 +96,8 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
     lumberjack (1.0.9)
     method_source (0.8.2)
     mime-types (2.4.3)
@@ -116,6 +124,14 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.5)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.1)
+      loofah (~> 2.0)
     rake (10.4.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
@@ -169,6 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionview
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   aws-sdk (= 2.0.17.pre)

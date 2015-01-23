@@ -20,4 +20,9 @@ else
   Refile.cache ||= Refile::Backend::S3.new(prefix: "cache", **aws )
 end
 
+require "refile/rails/attachment_helper"
+
+ActionView::Base.send(:include, Refile::AttachmentHelper)
+ActionView::Helpers::FormBuilder.send(:include, Refile::AttachmentHelper::FormBuilder)
+
 Refile.app = Refile::App.new

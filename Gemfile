@@ -12,6 +12,7 @@ gem 'sinatra-param'
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
 gem 'bcrypt-ruby'
+gem 'actionview'
 
 gem 'rake'
 
