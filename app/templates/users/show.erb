@@ -1,5 +1,7 @@
 
+<div>
+<%= erb :"photos/_photo_table", locals: {photos: @user.photos}  %>
+</div>
 <% if current_user and current_user.parameter_key = params[:parameter_key] %>
-<div>test</div>
 <%= erb :"photos/_photo_builder" %>
 <% end %>
