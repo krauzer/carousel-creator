@@ -1,14 +1,4 @@
-.login_bar {
-  padding:20px;
-  background-color: rgb(216, 216, 242);
-}
 
-.login_buttons {
-  color:rgb(11, 11, 61);
-  float:right;
-  display: inline-block;
-  margin-top: -10px;
-}
 
 .auth-box {
   padding:10px;

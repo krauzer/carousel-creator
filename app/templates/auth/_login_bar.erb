@@ -1,9 +1,12 @@
-  <div class="login_bar">
-  <div class="login_buttons">    <% if current_user %>
-      Welcome, <%= current_user.name %> | <a href="/signout">Signout</a>
-
+  <nav class="clearfix lighter-gray bg-dark-gray">
+  <div class="col-right">
+  <% if current_user %>
+     <div class= "button"> Welcome, <%= current_user.name %> </div>
+       |
+      <a href="/signout" class= "button button-nav-dark">Signout</a>
     <% else %>
-      <a href="/login">Login</a> | <a href="/signup">Signup</a>
+      <a href="/login" class= "button button-nav-dark">Login</a> |
+      <a href="/signup"  class= "button button-nav-dark">Signup</a>
     <% end %>
     </div>
-  </div>
+  </nav>
