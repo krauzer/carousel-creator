@@ -58,7 +58,7 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       styles: {
-        files: { '<%= app.stylesTemp %>application.css' : ['<%= app.stylesSrc %>normalize.css','<%= app.stylesSrc %>basscss.css','<%= app.stylesSrc %>*.css']  }
+        files: { '<%= app.stylesTemp %>application.css' : ['<%= app.stylesSrc %>normalize.css','<%= app.stylesSrc %>basscss.css','<%= app.stylesSrc %>basscssextend.css','<%= app.stylesSrc %>*.css']  }
        }
      },
 
