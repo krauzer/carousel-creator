@@ -1,9 +1,19 @@
+<div class="bg-mid-gray container py1">
+<div class="photo-uploader clearfix mx-auto">
+  <div class="left mr3">
+    <div class="upload_thumb_outer">
+      <div class="upload_thumb_inner">
+      </div>
+    </div>
+  </div>
 
-<div class="photo-uploader">
-  <form action="/photos" enctype="multipart/form-data" method="post" class="">
-    <input name ="photo[image_filename]"type="text" placeholder="filename">
-    <input name="photo[image]" type="hidden">
-    <input name="photo[image]" type="file">
-    <input type="submit" value="upload">
-  </form>
+    <div class="">
+      <form action="/photos" enctype="multipart/form-data" method="post" class="">
+        <input class= "block center field-dark" name ="photo[image_filename]"type="text" placeholder="filename">
+        <input name="photo[image]" type="hidden">
+        <input class= "block center mt1 mb1 button" name="photo[image]" type="file">
+        <button class="block center mt1 button-light-gray dark-gray" type="submit">Upload</button>
+      </form>
+    </div>
+  </div>
 </div>

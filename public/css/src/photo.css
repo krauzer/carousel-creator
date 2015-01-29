@@ -1,0 +1,31 @@
+.photo-uploader {
+  width: 500px;
+}
+
+.photo-uploader input{
+  padding: .25rem;
+  height: 1.5rem;
+  font-size: .825rem;
+}
+
+.photo-uploader button{
+  padding: .25rem;
+  height: 1.5rem;
+  font-size: .825rem;
+}
+
+.upload_thumb_outer{
+  border: 1px solid black;
+}
+
+.upload_thumb_inner{
+  width:100px;
+  height:100px;
+  border: 3px solid white;
+  background-color: black;
+  transition: all 0.2s;
+}
+
+.upload_thumb_inner:hover{
+  opacity:0.7;
+}
